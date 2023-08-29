@@ -2,6 +2,5 @@
 
 
 class Square:
-    def __init__(self):
-        pass
+    '''empty class Square that defines a square'''
     pass
