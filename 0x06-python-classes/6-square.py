@@ -18,11 +18,11 @@ class Square:
 
     @size.setter
     def size(self, value):
-        self.__size = value
         if type(value) != int:
             raise TypeError("size must be an integer")
         if (value < 0):
             raise ValueError("size must be >= 0")
+        self.__size = value
 
     def my_print(self):
         ''' prints in stdout the square'''
