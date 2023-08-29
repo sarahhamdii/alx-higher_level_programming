@@ -12,21 +12,12 @@ class Square:
 
     def area(self):
         '''Public instance'''
-        return self.__size ** 2
+        return self.__size**2
 
     @property
     def size(self):
         '''to retrieve'''
         return self.__size
-
-    @size.setter
-    def size(self, value):
-        '''property setter'''
-        if type(value) != int:
-            raise TypeError("size must be an integer")
-        if value < 0:
-            raise ValueError("size must be >= 0")
-        self.__size = value
 
     @size.setter
     def size(self, value):
