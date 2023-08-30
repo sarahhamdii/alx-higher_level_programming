@@ -3,24 +3,24 @@
 
 
 class Square:
-    """Defines a square"""
+    '''defines a square'''
     def __init__(self, size=0, position=(0, 0)):
-        """Initialises the data"""
+        '''Instantiation'''
         self.size = size
         self.position = position
 
     def area(self):
-        """Returns current square area"""
-        return self.__size**2
+        '''Public instance'''
+        return ((self.__size) ** 2)
 
     @property
     def size(self):
-        """Getter method"""
+        '''to retrieve'''
         return self.__size
 
     @size.setter
     def size(self, value):
-        """Setter method"""
+        '''property setter'''
         self.__size = value
         if type(value) != int:
             raise TypeError("size must be an integer")
@@ -43,12 +43,12 @@ class Square:
 
     @property
     def position(self):
-        """Getter method"""
+        '''to retrieve'''
         return self.__position
 
     @position.setter
     def position(self, value):
-        """Setter method"""
+        '''property setter'''
         if type(value) != tuple or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         if any(type(i) != int for i in value) or any(j < 0 for j in value):
